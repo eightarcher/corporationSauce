@@ -11,6 +11,20 @@ public class BankAccount {
     private String email;
     private String phone;
 
+    public BankAccount(){
+        this(99999, .99, "Customer", "email", "555-123-4567");
+        System.out.println("empty constructor called - using default param");
+    }
+
+
+    public BankAccount(int accNo, double balance, String custName, String email, String phone) {
+        this.accNo = accNo;
+        this.balance = balance;
+        this.custName = custName;
+        this.email = email;
+        this.phone = phone;
+    }
+
     public int getAccNo(){
         return this.accNo;
     }

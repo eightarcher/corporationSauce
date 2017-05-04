@@ -15,8 +15,12 @@ public class Main {
         System.out.println("Model is " + porsche.getModel());
     
         BankAccount checking = new BankAccount();
-        BankAccount savings = new BankAccount();
-        
+        BankAccount savings = new BankAccount(0,0,"","","");
+
+        System.out.println(checking.getAccNo());
+        System.out.println(checking.getCustName());
+        System.out.println(checking.getBalance());
+
         checking.setAccNo(12345);
         checking.setBalance(596.35);
         checking.setCustName("Mike");
@@ -48,6 +52,12 @@ public class Main {
 
         checking.withdraw(1000);
         savings.withdraw(1000);
+
+        BankAccount bobsAccount = new BankAccount(8675309,500000,
+                "Bob", "bob@bob.com", "917-855-6432");
+
+        bobsAccount.deposit(250000);
+        bobsAccount.withdraw(125000);
 
     
     }
